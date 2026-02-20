@@ -231,97 +231,25 @@ function App() {
         </div>
       </section>
 
-      {/* --- PREVIEW MODAL --- */}
-      {selectedProject && (
-        <div
-          className="fixed inset-0 z-[9999] flex items-center justify-center p-4 md:p-20 bg-black/95 backdrop-blur-2xl"
-          onClick={() => setSelectedProject(null)}
-        >
-          <button
-            className="absolute top-6 right-6 md:top-10 md:right-10 text-white hover:text-primary-blue transition-colors z-[10000] p-2"
-            onClick={(e) => {
-              e.stopPropagation();
-              setSelectedProject(null);
-            }}
-          >
-            <span className="material-symbols-outlined text-4xl">close</span>
-          </button>
-
-          <div
-            className="relative w-full max-w-7xl h-full max-h-[90vh] bg-neutral-900 rounded-[2rem] md:rounded-[3rem] border border-white/10 shadow-3xl overflow-hidden flex flex-col"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="h-12 bg-neutral-800 border-b border-white/5 flex items-center px-8 gap-4">
-              <div className="flex gap-2">
-                <div className="w-3 h-3 rounded-full bg-red-500/50"></div>
-                <div className="w-3 h-3 rounded-full bg-yellow-500/50"></div>
-                <div className="w-3 h-3 rounded-full bg-green-500/50"></div>
-              </div>
-              <div className="bg-black/20 px-4 py-1.5 rounded-md text-[9px] text-white/40 font-mono tracking-widest lowercase">
-                smartflow.studio/preview/{selectedProject.title.toLowerCase().replace(' ', '-')}
-              </div>
-            </div>
-
-            <div className="flex-1 relative overflow-auto bg-[#0a0a0c]">
-              <div className="absolute inset-0 grid-bg-mesh opacity-20 pointer-events-none"></div>
-              {/* Simulated UI Preview */}
-              <div className="p-12 md:p-24 space-y-12">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <span className="text-primary-blue font-bold tracking-[0.4em] text-[10px] uppercase mb-4 block">Vista Previa de Proyecto</span>
-                    <h2 className="text-4xl md:text-7xl font-bold font-display tracking-tight">{selectedProject.title}</h2>
-                  </div>
-                  <a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-white text-black text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-primary-blue hover:text-white transition-all">
-                    Abrir en GitHub
-                  </a>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-12">
-                  <div className="space-y-8">
-                    <p className="text-xl text-slate-400 font-light italic leading-relaxed">{selectedProject.description}</p>
-                    <div className="space-y-4">
-                      <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/30">Tecnologías Utilizadas</h4>
-                      <div className="flex flex-wrap gap-3">
-                        {["React", "GSAP", "Tailwind", "Vite", "Supabase"].map(tag => (
-                          <span key={tag} className="px-4 py-2 border border-white/10 rounded-lg text-[9px] uppercase tracking-widest text-white/60">{tag}</span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="rounded-2xl overflow-hidden border border-white/5 shadow-2xl">
-                    <img alt={selectedProject.title} className="w-full h-full object-cover" src={selectedProject.imgUrl} />
-                  </div>
-                </div>
-
-                {/* Visual Placeholder for deeper features */}
-                <div className="grid grid-cols-3 gap-6 opacity-40">
-                  <div className="h-40 bg-white/5 rounded-2xl border border-white/5"></div>
-                  <div className="h-40 bg-white/5 rounded-2xl border border-white/5"></div>
-                  <div className="h-40 bg-white/5 rounded-2xl border border-white/5"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* --- CTA SECTION --- */}
-      <section className="min-h-screen flex items-center justify-center relative bg-white overflow-hidden text-neutral-950">
-        <div className="absolute inset-0 bg-slate-50"></div>
-        <div className="absolute inset-0 opacity-[0.03] grid-bg-mesh invert"></div>
+      <section className="relative py-48 flex items-center justify-center overflow-hidden bg-[#0a0a0c] border-t border-white/5">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-primary-blue/10 rounded-full blur-[120px]"></div>
+          <div className="absolute inset-0 grid-bg-mesh opacity-20"></div>
+        </div>
 
-        <div className="relative z-10 text-center px-6 max-w-5xl transition-all">
-          <span className="text-primary-blue font-bold tracking-[0.4em] text-[10px] uppercase mb-12 block">Disponible para nuevos proyectos</span>
-          <h2 className="text-6xl md:text-[10rem] font-bold leading-[0.85] tracking-tighter mb-16 font-display">
-            ¿LISTO PARA <span className="text-primary-blue">ELEVAR</span> TU PRESENCIA DIGITAL?
+        <div className="relative z-10 text-center px-6 max-w-5xl">
+          <span className="text-primary-blue font-bold tracking-[0.4em] text-[10px] uppercase mb-8 block opacity-60">Disponible para nuevos desafíos</span>
+          <h2 className="text-5xl md:text-8xl font-black leading-[0.9] tracking-tighter mb-16 font-display uppercase">
+            ¿LISTO PARA <span className="text-primary-blue italic font-serif-fluid normal-case tracking-normal">Elevar</span> TU PRESENCIA?
           </h2>
           <div className="flex flex-col md:flex-row items-center justify-center gap-10">
-            <button className="bg-primary-blue text-white hover:bg-neutral-950 px-16 py-8 rounded-none font-bold text-2xl transition-all transform hover:scale-105 shadow-[0_30px_60px_rgba(19,91,236,0.25)] flex items-center gap-6 group">
-              INICIAR UN PROYECTO
-              <span className="material-symbols-outlined text-3xl group-hover:translate-x-3 transition-all">arrow_right_alt</span>
+            <button className="bg-primary-blue text-white hover:scale-105 px-16 py-7 rounded-full font-black text-[10px] tracking-[0.3em] uppercase transition-all shadow-[0_20px_40px_rgba(19,91,236,0.3)] flex items-center gap-6 group">
+              INICIAR PROYECTO
+              <span className="material-symbols-outlined text-xl group-hover:translate-x-2 transition-all">arrow_right_alt</span>
             </button>
-            <p className="text-neutral-400 font-medium text-left max-w-[200px] leading-tight text-xs uppercase tracking-widest italic">
-              Forjando excelencia digital para marcas de clase mundial.
+            <p className="text-slate-500 font-medium text-left max-w-[200px] leading-relaxed text-[9px] uppercase tracking-widest italic opacity-60">
+              Arquitectando experiencias de alta fidelidad para marcas de clase mundial.
             </p>
           </div>
         </div>
