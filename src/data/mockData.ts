@@ -1,6 +1,6 @@
 export const HERO_DATA = {
-    title: "Forjando Excelencia Digital",
-    subtitle: "Arquitectando experiencias digitales de alta fidelidad para la próxima generación de líderes globales.",
+    title: "Diseño & Desarrollo Web Premium",
+    subtitle: "Arquitectando experiencias digitales de alta fidelidad y sitios web de alto rendimiento.",
     cta: "Iniciar Proyecto"
 }
 

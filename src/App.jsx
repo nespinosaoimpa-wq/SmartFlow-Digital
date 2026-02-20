@@ -114,7 +114,7 @@ function App() {
 
         <div className="relative z-20 text-center px-6 max-w-6xl">
           <div className="mb-12 reveal-item">
-            <span className="font-wide text-[10px] uppercase tracking-[0.8em] text-primary-blue mb-6 block font-black opacity-80">Forging Digital Excellence</span>
+            <span className="font-wide text-[10px] uppercase tracking-[0.8em] text-primary-blue mb-6 block font-black opacity-80">Diseño & Desarrollo Web Premium</span>
             <div className="h-px w-20 bg-primary-blue/30 mx-auto"></div>
           </div>
 
@@ -124,8 +124,8 @@ function App() {
 
           <div className="mt-12 max-w-2xl mx-auto reveal-item">
             <p className="font-wide text-xs md:text-sm text-slate-400 uppercase tracking-[0.3em] leading-relaxed">
-              Crafting high-fidelity digital experiences <br />
-              <span className="text-white/40">for the next generation of global leaders.</span>
+              Desarrollo Web de Alto Rendimiento <br />
+              <span className="text-white/40">y Diseño Estratégico para Líderes Globales.</span>
             </p>
           </div>
 
