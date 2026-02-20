@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartFlow | Premium Digital Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@100;300;400;500;700;900&family=Noto+Serif:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Noto+Sans:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#135bec",
+            "primary-blue": "#135bec",
+            "primary-neon": "#19e624",
+            "accent-gold": "#d4af37",
+            "background-dark": "#0a0a0c",
+          },
+          fontFamily: {
+            grotesk: ["Space Grotesk", "sans-serif"],
+            playfair: ["Playfair Display", "serif"],
+            noto: ["Noto Serif", "serif"],
+            sans: ["Noto Sans", "sans-serif"],
+            inter: ["Inter", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>

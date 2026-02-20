@@ -1,0 +1,24 @@
+{
+    "colors": {
+        "primary": "#2b8cee",
+        "primary-deep": "#135bec",
+        "primary-neon": "#19e624",
+        "bg-dark": "#080c10",
+        "bg-velvet": "#0a0a0a",
+        "text-main": "#f6f7f8",
+        "text-muted": "#94a3b8",
+        "white-glass": "rgba(255, 255, 255, 0.03)",
+        "border-glass": "rgba(255, 255, 255, 0.1)"
+    },
+    "typography": {
+        "display": "Space Grotesk, sans-serif",
+        "serif": "Playfair Display, serif",
+        "sans": "Inter, sans-serif",
+        "noto": "Noto Serif, serif"
+    },
+    "effects": {
+        "blur-standard": "blur(12px)",
+        "blur-deep": "blur(40px)",
+        "shadow-soft": "0 20px 60px -15px rgba(0, 0, 0, 0.5)"
+    }
+}
